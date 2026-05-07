@@ -14,10 +14,10 @@ on:
         type: string
         default: ''
       split_size:
-        description: '📦 حجم هر تکه (پیش‌فرض: 500m)'
+        description: '📦 حجم هر تکه (پیش‌فرض: 99m)'
         required: false
         type: string
-        default: '500m'
+        default: '99m'
 
 permissions:
   contents: write
