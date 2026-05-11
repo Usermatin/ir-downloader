@@ -40,6 +40,7 @@ jobs:
 
       - name: 📥 پردازش و دانلود فایل‌ها
         run: |
+          set +v
           # آماده‌سازی لیست لینک‌ها
           echo "${{ github.event.inputs.file_urls }}" | tr ',' '\n' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' > /tmp/urls.txt
           TOTAL_URLS=$(wc -l < /tmp/urls.txt)
