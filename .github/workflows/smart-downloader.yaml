@@ -158,7 +158,7 @@ jobs:
             rm -f "$FINAL_DIR"/*.7z*
 
             if [ -z "${{ github.event.inputs.password }}" ]; then
-              7z a -mhe=on -mx=7 -md=64m -v90m "$FINAL_DIR/archive.7z" "./$SAFE_FILENAME" > /dev/null
+              7z a -mhe=on -mx=7 -md=128m -v90m "$FINAL_DIR/archive.7z" "./$SAFE_FILENAME" > /dev/null
             else
               7z a -p"${{ github.event.inputs.password }}" -mhe=on -mx=7 -md=64m -v90m "$FINAL_DIR/archive.7z" "./$SAFE_FILENAME" > /dev/null
             fi
