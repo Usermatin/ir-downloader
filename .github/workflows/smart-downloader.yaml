@@ -29,11 +29,13 @@ jobs:
 
       - name: ⚙️ نصب ابزارها
         run: |
+          set +v
           sudo apt-get update
           sudo apt-get install -y p7zip-full file aria2 curl
 
       - name: 🔧 تنظیم بافر HTTP
         run: |
+          set+v
           git config --global http.postBuffer 524288000
           git config --global http.lowSpeedLimit 0
           git config --global http.lowSpeedTime 999999
